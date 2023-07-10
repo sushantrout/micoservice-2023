@@ -1,0 +1,17 @@
+database-
+---------------------
+hotel-service
+---------------------
+server.port=8082
+spring.datasource.url=jdbc:postgresql://localhost:5432/microservice-2023
+spring.datasource.username=postgres
+spring.datasource.password=admin
+spring.jpa.hibernate.ddl-auto=update
+
+user-service
+-----------------
+server.port=8081
+spring.datasource.url=jdbc:postgresql://localhost:5432/microservice-2023
+spring.datasource.username=postgres
+spring.datasource.password=admin
+spring.jpa.hibernate.ddl-auto=update
