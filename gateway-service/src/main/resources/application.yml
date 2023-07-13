@@ -1,5 +1,6 @@
 server:
   port: 8084
+
 spring:
   application:
     name: GATEWAY-SERVICE
@@ -20,7 +21,15 @@ spring:
           uri: lb://RATING-SERVICE
           predicates:
             - Path=/ratings/**
-
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
 
 # cloud configuration
 eureka:
